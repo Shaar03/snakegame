@@ -186,7 +186,7 @@ function stopGame() {
 
 function updateHighScore() {
   const currentScore = snake.length - 1;
-  if (currentScore > highScore) {
+  if (currentScore > localStorage.getItem("high-score")) {
     highScore = currentScore;
     highScoreText.textContent = highScore.toString().padStart(3, "0");
     localStorage.setItem("high-score", highScore.toString());
